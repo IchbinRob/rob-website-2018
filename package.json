@@ -1,0 +1,12 @@
+{
+  "name": "rob-website-2018",
+  "version": "1.0.0",
+  "description": "My new website",
+  "main": "index.js",
+  "repository": "https://github.com/IchbinRob/rob-website-2018.git",
+  "author": "Rob",
+  "license": "MIT",
+  "dependencies": {
+    "metalsmith": "^2.3.0"
+  }
+}
