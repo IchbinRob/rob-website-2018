@@ -1,0 +1,25 @@
+.comp-postheader {
+    border-bottom: 1px solid get-color('gray');
+    margin-bottom: get-spacing('small');
+}
+
+.comp-postheader__title {
+    @include font-size('major');
+}
+
+.comp-postheader__titlelink {
+    text-decoration: none;
+    color: get-color('black');
+
+    &:visited {
+        color: get-color('black'); 
+    }
+}
+
+.comp-postheader__strapline {
+    font-weight: bold;
+}
+
+.comp-postheader__date {
+    
+}

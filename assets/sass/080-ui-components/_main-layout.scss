@@ -1,0 +1,37 @@
+.comp-mainlayout {
+    padding: 0 get-spacing('small');
+    margin: get-spacing('small') auto;
+    max-width: 1200px;
+
+    @include mq(get-mqbreakpoint('medium')) {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-column-gap: get-spacing('large');
+        grid-template-areas:
+        "sidebar content"
+        "sidebar content"
+        "sidebar mentions"
+        "footer footer";
+    }
+}
+
+.comp-mainlayout__sidebar {
+    grid-area: sidebar;
+}
+
+.comp-mainlayout__content {
+    grid-area: content;
+    min-width: 0;
+}
+
+.comp-mainlayout__mentions {
+    grid-area: mentions;
+
+    padding-top: get-spacing('xsmall');
+    @include font-size('sub');
+    border-top: 1px solid get-color('gray');
+}
+
+.comp-mainlayout__footer {
+    grid-area: footer;
+}

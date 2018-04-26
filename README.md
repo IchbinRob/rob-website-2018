@@ -1,2 +1,2 @@
 # Hello here
-It's the code for my new portfolio :3
+It's the code of my new portfolio :3
