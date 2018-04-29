@@ -1,13 +1,14 @@
-var gulp = require("gulp"),
+const gulp = require("gulp"),
     {exec} = require("child_process"),
     BrowserSync = require("browser-sync"),
     sass = require("gulp-sass"),
     responsive = require('gulp-responsive'),
     metalsmith = require('gulp-metalsmith');
 
-var layouts = require('metalsmith-layouts'),
+const layouts = require('metalsmith-layouts'),
     markdown = require('metalsmith-markdown'),
-    permalinks = require('metalsmith-permalinks');
+    permalinks = require('metalsmith-permalinks'),
+    collections = require('metalsmith-collections');
 
 gulp.task('smithy', function () {
     return gulp.src('./src/**')
@@ -16,13 +17,19 @@ gulp.task('smithy', function () {
         frontmatter: true,
         clean: true,
         use: [
+          collections({
+                sections: {
+                    pattern: '*.md',
+                    sortBy: 'weight'
+                }
+            }),
             markdown({
                 smartypants: true,
                 gfm: true,
                 tables: true,
                 langPrefix: 'language-'
             }),
-            permalinks(),
+            // permalinks(),
             layouts({
                 engine: 'nunjucks',
                 default: 'default.njk',
@@ -45,22 +52,26 @@ gulp.task('smithy', function () {
 //     .pipe(gulp.dest('./content'));
 // });
 
-// gulp.task('images', function () {
-//     return gulp.src(['./assets/images/**/*.{png,jpg,jpeg,gif}'])
-//       .pipe(responsive(
-//         {
-//             quality: 70,
-//             progressive: true,
-//             compressionLevel: 6,
-//             withMetadata: false,
-//         }))
-//       .pipe(gulp.dest('dist/images'));
-//   });
+gulp.task('images', function () {
+    return gulp.src(['./assets/images/**/*.{png,jpg,jpeg,gif}'])
+      // .pipe(responsive(
+      //   {
+      //       quality: 70,
+      //       progressive: true,
+      //       compressionLevel: 6,
+      //       withMetadata: false,
+      //   }))
+      .pipe(gulp.dest('dist/images'));
+  });
+
+  gulp.task('fonts', function () {
+      return gulp.src(['./assets/fonts/**/*'])
+        .pipe(gulp.dest('dist/fonts'));
+    });
 
 // const browserSync = BrowserSync.create();
 const sassOpts = {
     outputStyle: 'compressed',
-    includePaths: ['./node_modules/loom/assets'],
     errLogToConsole: true };
 
 // Build Sass files into CSS
@@ -95,4 +106,4 @@ gulp.task('sync', ['sass', 'smithy', 'watch'],  function() {
 
 gulp.task('default', ['sync'], function() {});
 
-gulp.task('build', ['sass', 'smithy']);
+gulp.task('build', ['sass', 'smithy', 'images', 'fonts']);
