@@ -1,15 +1,9 @@
-// // Size.
-// $size: (
-//
-// );
-//
-// // Font.
-// $font: (
-//
-// );
+// CSS var
+:root {
+  --slideNumber: 3;
+  --boxwidth: 100vw;
+  --boxheight: 100vh;
+}
 
-// Palette.
-$palette: (
-  bcg-white: #f6f3ea,
-  font-black: #3b3a37,
-);
+// SCSS var
+$slideNumber: 3;

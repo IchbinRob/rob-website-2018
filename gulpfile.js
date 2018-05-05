@@ -98,7 +98,7 @@ gulp.task('watch', () => {
     gulp.watch('./layouts/**/*', ["smithy"]);
 });
 
-gulp.task('sync', ['sass', 'smithy', 'watch'],  function() {
+gulp.task('sync', ['sass', 'smithy', 'images', 'fonts', 'watch'],  function() {
     BrowserSync.init({
         server: './dist'
     });

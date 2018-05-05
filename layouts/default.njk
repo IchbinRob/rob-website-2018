@@ -12,12 +12,25 @@
 
     </head>
     <body>
-
-      {% block content %}
-        {% for item in sections %}
+      <div class="wrapper">
+  {% set id = 1 %}
+    {% for item in sections %}
+        <div id="p{{ id }}" class="anchor"></div>
+        {% set id = id + 1 %}
+    {% endfor %}
+        <div class="grid">
+    {% block content %}
+      {% set idItem = 1 %}
+      {% for item in sections %}
+          <div class="item" id="item1">
+    				<a href="#p{{idItem}}" class="focus-page">focus</a>
             {{ item.contents | safe }}
-        {% endfor %}
-      {% endblock %}
-      
+            {% set idItem = idItem + 1 %}
+            <a href="#p{{idItem}}">Next</a>
+          </div>
+      {% endfor %}
+    {% endblock %}
+        </div>
+      </div>
     </body>
 </html>
