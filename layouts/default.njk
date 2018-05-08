@@ -12,6 +12,9 @@
 
     </head>
     <body>
+
+      <input id="menuChk" name="menuChk" type="checkbox">
+
       <div class="wrapper">
   {% set id = 1 %}
     {% for item in sections %}
@@ -22,8 +25,12 @@
     {% block content %}
       {% set idItem = 1 %}
       {% for item in sections %}
-          <div class="item" id="item1">
+          <div class="item" id="item{{idItem}}">
+            <div class="navbar">
+							<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility">☰</label>
+						</div>
     				<a href="#p{{idItem}}" class="focus-page">focus</a>
+            <label class="selected-closer" for="menuChk">&nbsp;</label>
             {{ item.contents | safe }}
             {% set idItem = idItem + 1 %}
             <a href="#p{{idItem}}">Next</a>

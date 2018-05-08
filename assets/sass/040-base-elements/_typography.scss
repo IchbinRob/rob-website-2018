@@ -1,44 +1,23 @@
-// a {
-//   color: get-color('pink');
-//
-//   &:hover {
-//     color: get-color('black');
-//   }
-//
-//   &:visited {
-//     color: darken(get-color('pink'), 50%);
-//   }
-// }
-//
-// blockquote {
-//   border-left: get-spacing(xsmall) solid get-color(gray);
-//   margin-left: 0;
-//   padding: get-spacing(xsmall) get-spacing(small);
-//   font-style: italic;
-//
-//   p:last-child {
-//     margin-bottom: 0;
-//   }
-// }
-//
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// .h1,
-// .h2,
-// .h3,
-// .h4,
-// .h5,
-// .h6 {
-//   letter-spacing: 1.2px;
-//   line-height: 1.2;
-//   margin-bottom: get-spacing('small');
-//
-//   .fonts-loaded & {
-//     letter-spacing: initial;
-//     line-height: 1.2;
-//   }
-// }
+@import '../fonts/01.Archia-Thin-webfont/stylesheet.css';
+@import '../fonts/02.Archia-Light-webfont/stylesheet.css';
+@import '../fonts/03.Archia-Regular-webfont/stylesheet.css';
+@import '../fonts/04.Archia-Medium-webfont/stylesheet.css';
+@import '../fonts/05.Archia-Semibold-webfont/stylesheet.css';
+@import '../fonts/06.Archia-Bold-webfont/stylesheet.css';
+
+@import '../fonts/Calendas-Plus-Regular-Webfont/stylesheet.css';
+@import '../fonts/Calendas-Plus-Bold-Webfont/stylesheet.css';
+@import '../fonts/Calendas-Plus-Italic-Webfont/stylesheet.css';
+
+html,
+body,
+a,
+p {
+  font-family: 'archiaregular', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'calendas_plusbold', cursive;
+}

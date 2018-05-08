@@ -1,11 +1,25 @@
+body {
+    background-color: black;
+}
+
+
+#menuChk {
+  display: none;
+  position: fixed;
+  top: -5em;
+}
+
 .wrapper {
   position: fixed;
   transition: transform .4s ease-in-out;
   width: 100vw;
   height: 100vh;
-  // @temp
-  border: 5px black solid;
-  // end @temp
+  top: 1.5em;
+  left: 1.5em;
+}
+
+#menuChk:checked ~ .wrapper {
+  transform: scale(.5);
 }
 
 .anchor {
@@ -24,8 +38,8 @@
   width: calc(var(--slideNumber)*100vw);
   height: 100vh;
   display: grid;
-  grid-template: repeat(4, var(--boxheight)) / repeat(3, var(--boxwidth));
-  grid-gap: 0em;
+  grid-template: repeat(4, var(--boxheight))/ repeat(3, var(--boxwidth));
+  grid-gap: 1.5em;
 }
 
 :target ~ .grid {
@@ -42,5 +56,50 @@
   #p#{$i+1}:target {
     left: calc(#{$i}*100vw);
     top: 0;
+  }
+}
+
+.item {
+  background-color: white;
+  position: relative;
+  width: var(--boxwidth);
+  height: var(--boxheight);
+  // @temp
+  // border: 25px blue solid;
+  // margin: 25px;
+  // end @temp
+
+  a.focus-page {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--boxwidth);
+    height: var(--boxheight);
+    opacity: 0;
+    z-index: 100;
+  }
+}
+
+@for $i from 0 through $slideNumber {
+  #p#{$i+1}:target ~ .grid > #item#{$i+1} .focus-page {
+      display: none;
+  }
+}
+
+label.selected-closer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 4em);
+    height: calc(100vh - 4em);
+    z-index: 100;
+}
+
+@for $i from 0 through $slideNumber {
+  #menuChk:checked ~ .wrapper #p#{$i+1}:target ~ .grid > #item#{$i+1} label.selected-closer {
+      display: block;
+      cursor: pointer;
   }
 }

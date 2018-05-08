@@ -1,8 +1,8 @@
 // CSS var
 :root {
   --slideNumber: 3;
-  --boxwidth: 100vw;
-  --boxheight: 100vh;
+  --boxwidth: calc(100vw - 6em);
+  --boxheight: calc(100vh - 3em);
 }
 
 // SCSS var
