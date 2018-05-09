@@ -52,6 +52,11 @@ gulp.task('smithy', function () {
 //     .pipe(gulp.dest('./content'));
 // });
 
+gulp.task('js', function () {
+    return gulp.src(['./assets/js/*.js'])
+    .pipe(gulp.dest('dist/js'));
+});
+
 gulp.task('images', function () {
     return gulp.src(['./assets/images/**/*.{png,jpg,jpeg,gif}'])
       // .pipe(responsive(
@@ -96,9 +101,10 @@ gulp.task('watch', () => {
     gulp.watch("./assets/sass/**/*.scss", ['sass']);
     gulp.watch('./src/**/*', ["smithy"]);
     gulp.watch('./layouts/**/*', ["smithy"]);
+    gulp.watch("./assets/js/**/*.js", ['js']);
 });
 
-gulp.task('sync', ['sass', 'smithy', 'images', 'fonts', 'watch'],  function() {
+gulp.task('sync', ['sass', 'smithy', 'images', 'fonts', 'js', 'watch'],  function() {
     BrowserSync.init({
         server: './dist'
     });
@@ -106,4 +112,4 @@ gulp.task('sync', ['sass', 'smithy', 'images', 'fonts', 'watch'],  function() {
 
 gulp.task('default', ['sync'], function() {});
 
-gulp.task('build', ['sass', 'smithy', 'images', 'fonts']);
+gulp.task('build', ['sass', 'smithy', 'images', 'fonts', 'js']);

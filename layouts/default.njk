@@ -14,7 +14,6 @@
     <body>
 
       <input id="menuChk" name="menuChk" type="checkbox">
-
       <div class="wrapper">
   {% set id = 1 %}
     {% for item in sections %}
@@ -34,10 +33,24 @@
             {{ item.contents | safe }}
             {% set idItem = idItem + 1 %}
             <a href="#p{{idItem}}">Next</a>
+            <img id="clipped{{idItem - 1}}" class="background" src="./images/idRob2018FINAL.jpg" alt="">
+
+            <svg height="0" width="0">
+              <defs>
+                <clipPath id="path{{idItem - 1}}">
+                  <text x="300" y="1000"
+                        font-family="calendas_plusbold"
+                        font-size="145vh">
+                    {{ item.lettre }}
+                  </text>
+                </clipPath>
+              </defs>
+            </svg>
           </div>
       {% endfor %}
     {% endblock %}
         </div>
       </div>
+      <script src="./js/img.js" charset="utf-8"></script>
     </body>
 </html>
