@@ -3,8 +3,8 @@ collections: sections
 layout: default.njk
 slug: home
 title: Home
-realtitle: Coucou
-lettre: S
+titleitem: Home
+lettre: H
 weight: 0
 ---
 

@@ -3,7 +3,7 @@ collections: sections
 layout: section.njk
 slug: about
 title: About
-realtitle: About
+titleitem: About
 lettre: A
 weight: 5
 ---
