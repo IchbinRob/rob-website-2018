@@ -1,5 +1,4 @@
 body {
-    background-color: rgba(0,0,0,.2);
     overflow: hidden;
 }
 
@@ -16,7 +15,7 @@ body {
   height: 100vh;
   top: 1.5em;
   left: 1.5em;
-  transform-origin: 50% 5%;
+  transform-origin: 50% 35%;
 }
 
 
@@ -24,6 +23,8 @@ body {
   transform: scale(.3);
   @media screen and (min-width:759px) {
     transform: scale(.2);
+    transform-style: preserve-3d;
+    transform: scale(.2) translateX(33vw) translateY(-340px) rotateX(45deg) rotateZ(45deg);
   }
 }
 
@@ -44,7 +45,7 @@ body {
   width: calc(var(--slideNumber)*100vw);
   height: 100vh;
   display: grid;
-  grid-template: var(--boxheight) auto/ repeat(3, var(--boxwidth));
+  grid-template: var(--boxheight) auto/ repeat(var(--slideNumber), var(--boxwidth));
 
   grid-column-gap: 1.5em;
   grid-row-gap: 1.5em;
@@ -61,7 +62,7 @@ body {
 
 @for $i from 0 through $slideNumber {
   #p#{$i+1}:target ~ .grid {
-    transform: translate3d( calc(-#{$i} * var(--boxwidth) ), 0, 0);
+    transform: translate3d( calc(-#{$i} * var(--translateWidth) ), 0, 0);
   }
 }
 
@@ -81,15 +82,12 @@ body {
 
 
 .titre-item {
-  height: 105%;
+  width: 200vw;
   font-size: 20vw;
-  writing-mode: tb;
-  text-orientation: mixed;
   text-transform: uppercase;
-  word-wrap: break-word;
-  justify-self: center;
   letter-spacing: 10vw;
   line-height: 138%;
+  transform: rotate(-90deg) translate3d(-30vw, -104%, 0);
 
   a {
     font-family: inherit;
@@ -104,6 +102,7 @@ body {
   width: var(--boxwidth);
   height: var(--boxheight);
   overflow: hidden;
+  box-shadow: 20px 20px 50px 0px rgba(1,1,1,0.1);
   // @temp
   // border: 25px blue solid;
   // margin: 25px;
@@ -126,10 +125,12 @@ body {
     top: 0;
     right: 0;
     overflow: hidden;
+    // filter: brightness(95%) saturate(130%);
   }
 
   article {
     position: relative;
+    z-index: 150;
   }
 }
 
@@ -155,9 +156,24 @@ label.selected-closer {
     z-index: 100;
 }
 
+
+
 @for $i from 0 through $slideNumber {
   #menuChk:checked ~ .wrapper #p#{$i+1}:target ~ .grid > #item#{$i+1} label.selected-closer {
       display: block;
       cursor: pointer;
+  }
+
+  #menuChk:checked ~ .wrapper #p#{$i+1}:target ~ .grid > .item {
+    transition: .3s opacity;
+    opacity: .6;
+  }
+
+  #menuChk:checked ~ .wrapper #p#{$i+1}:target ~ .grid > #item#{$i+1} {
+    opacity: 1;
+  }
+
+  #menuChk:checked ~ .wrapper #p#{$i+1}:target ~ .grid > .item a.focus-page:hover {
+    opacity: 1;
   }
 }

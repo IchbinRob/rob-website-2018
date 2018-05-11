@@ -3,8 +3,8 @@ collections: sections
 layout: default.njk
 slug: home
 title: Home
-titleitem: Home
-lettre: H
+titleitem: Début
+lettre: R
 weight: 0
 ---
 

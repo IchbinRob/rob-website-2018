@@ -3,8 +3,8 @@ collections: sections
 layout: section.njk
 slug: about
 title: About
-titleitem: About
-lettre: A
+titleitem: Présentation
+lettre: P
 weight: 5
 ---
 

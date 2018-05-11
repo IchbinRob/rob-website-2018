@@ -1,9 +1,10 @@
 // CSS var
 :root {
-  --slideNumber: 3;
+  --slideNumber: 5;
   --boxwidth: calc(100vw - 6em);
   --boxheight: calc(100vh - 3em);
+  --translateWidth: calc(100vw - 5em);
 }
 
 // SCSS var
-$slideNumber: 3;
+$slideNumber: 5;

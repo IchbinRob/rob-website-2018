@@ -1,0 +1,14 @@
+.grain-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: .2;
+}
+//
+// @for $i from 0 through $slideNumber {
+//   .grain-canvas.c#{$i+1} {
+//       clip-path: url('#path#{$i+1}');
+//   }
+// }

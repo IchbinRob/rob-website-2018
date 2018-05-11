@@ -3,7 +3,7 @@ collections: sections
 layout: section.njk
 slug: portfolio
 title: Portfolio
-titleitem: 'Port folio'
+titleitem: Portfolio
 weight: 10
 lettre: P
 ---
