@@ -48,9 +48,20 @@
               <label class="selected-closer" for="menuChk">&nbsp;</label>
               <h2>{{item.title}}</h2>
               {{ item.contents | safe }}
-              {% set idItem = idItem + 1 %}
-              <a href="#p{{idItem}}">Next</a>
             </article>
+            {% set idItem = idItem - 1 %}
+            {% if idItem !== 0 %}
+            <div class="previous">
+              <a href="#p{{idItem}}">&larr;</a>
+            </div>
+            {% endif %}
+            {% set idItem = idItem + 2 %}
+            {% if idItem === 7 %}
+            {% set idItem = 1 %}
+            {% endif %}
+            <div class="next">
+              <a href="#p{{idItem}}">&rarr;</a>
+            </div>
           </section>
       {% endfor %}
     {% endblock %}

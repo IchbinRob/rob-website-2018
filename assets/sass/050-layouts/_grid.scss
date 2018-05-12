@@ -13,9 +13,13 @@ body {
   transition: transform .4s ease-in-out;
   width: 100vw;
   height: 100vh;
-  top: 1.5em;
-  left: 1.5em;
+  top: 0em;
+  left: 0em;
   transform-origin: 50% 35%;
+  @media screen and (min-width: 580px) {
+    top: 1.5em;
+    left: 1.5em;
+  }
 }
 
 
@@ -47,13 +51,17 @@ body {
   display: grid;
   grid-template: var(--boxheight) auto/ repeat(var(--slideNumber), var(--boxwidth));
 
-  grid-column-gap: 1.5em;
-  grid-row-gap: 1.5em;
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+
+  @media screen and (min-width: 580px) {
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
+  }
+
   @media screen and (min-width:759px) {
     grid-row-gap: 10em;
   }
-
-
 }
 
 :target ~ .grid {
@@ -103,10 +111,52 @@ body {
   height: var(--boxheight);
   overflow: hidden;
   box-shadow: 20px 20px 50px 0px rgba(1,1,1,0.1);
+
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+
   // @temp
   // border: 25px blue solid;
   // margin: 25px;
   // end @temp
+
+  .next,
+  .previous {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: box-shadow .3s;
+    cursor: pointer;
+
+    a {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: archiabold;
+      font-size: 28px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .previous {
+        grid-column: 1 / 1;
+        &:hover {
+          box-shadow: inset -17px 0px 12px 0px rgba(1,1,1,0.1);
+        }
+  }
+
+  .next {
+        grid-column: 3;
+
+        &:hover {
+          box-shadow: inset 17px 0px 12px 0px rgba(1,1,1,0.1);
+        }
+  }
+
 
   a.focus-page {
     display: block;
