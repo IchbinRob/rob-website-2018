@@ -40,15 +40,20 @@
                 </clipPath>
               </defs>
             </svg>
-            <article>
+            <main>
               <div class="navbar">
                 <label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility">☰</label>
               </div>
               <a href="#p{{idItem}}" class="focus-page">focus</a>
               <label class="selected-closer" for="menuChk">&nbsp;</label>
-              <h2>{{item.title}}</h2>
-              {{ item.contents | safe }}
-            </article>
+              <article>
+                <h2>{{item.title}}</h2>
+                {% if item.mediatype === 'iframe' %}
+                <iframe width="0" height="0" src="{{ item.img }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                {% endif %}
+                {{ item.contents | safe }}
+              </article>
+            </main>
             {% set idItem = idItem - 1 %}
             {% if idItem !== 0 %}
             <div class="previous">

@@ -178,9 +178,16 @@ body {
     // filter: brightness(95%) saturate(130%);
   }
 
-  article {
+  > main {
+    display: grid;
+    grid-template-rows: 50px;
     position: relative;
     z-index: 150;
+    height: var(--boxheight);
+    overflow: scroll;
+    @media screen and (min-height: 500px), (min-width:770px){
+      overflow: hidden;
+    }
   }
 }
 
