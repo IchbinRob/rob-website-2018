@@ -175,16 +175,18 @@ body {
     top: 0;
     right: 0;
     overflow: hidden;
+    filter: opacity(0.8);
     // filter: brightness(95%) saturate(130%);
   }
 
-  > main {
+  > div {
     display: grid;
-    grid-template-rows: 50px;
+    grid-template-rows: auto;
     position: relative;
     z-index: 150;
     height: var(--boxheight);
     overflow: scroll;
+    grid-column: 2/2;
     @media screen and (min-height: 500px), (min-width:770px){
       overflow: hidden;
     }
@@ -214,6 +216,9 @@ label.selected-closer {
 }
 
 
+#menuChk:checked ~ .wrapper .item .background {
+    filter: opacity(1);
+}
 
 @for $i from 0 through $slideNumber {
   #menuChk:checked ~ .wrapper #p#{$i+1}:target ~ .grid > #item#{$i+1} label.selected-closer {

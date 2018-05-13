@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         {% block header %}
             <title>{{title}} | {{ site.title }}</title>
@@ -25,7 +25,7 @@
       {% set idItem = 1 %}
       {% for item in sections %}
           <h2 class="titre-item" id="titreItem{{ idItem }}"><a href="#p{{idItem}}">{{ item.titleitem }}</a></h2>
-          <section class="item" id="item{{idItem}}">
+          <div class="item" id="item{{idItem}}">
             <!-- <canvas id="grain{{idItem}}" class="grain-canvas c{{idItem}}" width="1000" height="1000"></canvas> -->
             <img id="clipped{{idItem}}" class="background" src="./images/idRob2018FINAL.jpg" alt="">
 
@@ -40,20 +40,25 @@
                 </clipPath>
               </defs>
             </svg>
-            <main>
-              <div class="navbar">
-                <label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility">☰</label>
-              </div>
+            <nav>
+              <label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility">&infin;</label>
+            </nav>
+            <div>
               <a href="#p{{idItem}}" class="focus-page">focus</a>
               <label class="selected-closer" for="menuChk">&nbsp;</label>
               <article>
                 <h2>{{item.title}}</h2>
                 {% if item.mediatype === 'iframe' %}
-                <iframe width="0" height="0" src="{{ item.img }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="0" height="0" src="{{ item.img }}" allowfullscreen></iframe>
                 {% endif %}
-                {{ item.contents | safe }}
+                {% if item.mediatype === 'img' %}
+                <img src="images/{{item.img}}" alt="{{item.alt}}">
+                {% endif %}
+                <div class="content-item">
+                  {{ item.contents | safe }}
+                </div>
               </article>
-            </main>
+            </div>
             {% set idItem = idItem - 1 %}
             {% if idItem !== 0 %}
             <div class="previous">
@@ -67,11 +72,11 @@
             <div class="next">
               <a href="#p{{idItem}}">&rarr;</a>
             </div>
-          </section>
+          </div>
       {% endfor %}
     {% endblock %}
         </div>
       </div>
-      <script src="./js/img.js" charset="utf-8"></script>
+      <script src="./js/img.js"></script>
     </body>
 </html>
