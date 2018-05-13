@@ -1,16 +1,19 @@
 
 .menuBtn {
   border-radius: 41px;
+  line-height: 2.9rem;
+  height: 50px;
+  width: 50px;
   font-size: 3rem;
   font-family: calendasplus_bold;
   position: absolute;
   top: 10px;
-  left: 12px;
+  right: 12px;
   padding: 0 7px;
   box-shadow: 6px 8px 10px 0px rgba(1,1,1,0.2);
   background: url('../images/idRob2018FINAL.jpg');
   // background-position: 990px 900px;
-  transition: box-shadow .2s, top .1s, left .1s;
+  transition: box-shadow .2s, top .1s, right .1s;
   cursor: pointer;
   z-index: 500;
 }
@@ -26,6 +29,6 @@
         box-shadow: 0px 0px 0px 0px rgba(1,1,1,0);
         color: white;
         top: 14px;
-        left: 16px;
+        right: 10px;
     }
 }
