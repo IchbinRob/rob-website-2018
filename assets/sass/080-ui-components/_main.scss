@@ -91,12 +91,14 @@
       grid-row: 2 / 2;
       p {
         font-size: calc(.5rem + 1vw);
+        height: calc(var(--boxheight) - 19vh);
       }
     }
 
     @media screen and (min-width: 1240px) {
       p {
-        font-size: 20px
+        font-size: 20px;
+        padding-right: 20px;
       }
     }
   }
