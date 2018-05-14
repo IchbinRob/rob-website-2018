@@ -9,6 +9,8 @@
 @import '../fonts/Calendas-Plus-Bold-Webfont/stylesheet.css';
 @import '../fonts/Calendas-Plus-Italic-Webfont/stylesheet.css';
 
+@import '../fonts/fontello/fontello.css';
+
 html,
 body,
 a,
@@ -21,7 +23,10 @@ p {
 }
 
 h1,
-h2,
-h3 {
+h2, {
   font-family: 'calendas_plusbold', cursive;
+}
+
+h3 {
+  font-family: 'archiabold', sans-serif;
 }

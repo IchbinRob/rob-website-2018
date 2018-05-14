@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         {% block header %}
-            <title>{{title}} | {{ site.title }}</title>
+            <title>Portfolio | {{ site.title }}</title>
         {% endblock %}
 
         <meta charset="utf-8">
@@ -54,7 +54,7 @@
                 {% if item.mediatype === 'img' %}
                 <img src="images/{{item.img}}" alt="{{item.alt}}">
                 {% endif %}
-                <div class="content-item">
+                <div class="content-item {{item.slug}}-item">
                   {{ item.contents | safe }}
                 </div>
               </article>

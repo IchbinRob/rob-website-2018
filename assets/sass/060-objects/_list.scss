@@ -1,0 +1,32 @@
+li {
+
+  [class^="icon-"] {
+    background: url(../images/idRob2018FINAL.jpg);
+    padding: 0 5px;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-size: 1.3rem;
+    display: block;
+    margin: auto;
+
+    @media screen and (min-width: 470px) {
+        display: inline-block;
+    }
+  }
+
+  .icon-mail {
+    background-position: bottom;
+  }
+  .icon-github {
+    background-position: right;
+  }
+  .icon-beer {
+    background-position: center;
+  }
+  .icon-gamepad {
+    background-position: top;
+  }
+}
