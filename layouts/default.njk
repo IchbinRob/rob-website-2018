@@ -27,7 +27,7 @@
           <h2 class="titre-item" id="titreItem{{ idItem }}"><a href="#p{{idItem}}">{{ item.titleitem }}</a></h2>
           <div class="item" id="item{{idItem}}">
             <!-- <canvas id="grain{{idItem}}" class="grain-canvas c{{idItem}}" width="1000" height="1000"></canvas> -->
-            <img id="clipped{{idItem}}" class="background" src="./images/idRob2018FINAL.jpg" alt="">
+            <img id="clipped{{idItem}}" class="background" src="./images/idRob2018FINAL.jpg" alt="" aria-hidden="true">
 
             <svg height="0" width="0">
               <defs>
@@ -44,7 +44,7 @@
               <label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility">&infin;</label>
             </nav>
             <div>
-              <a href="#p{{idItem}}" class="focus-page">focus</a>
+              <a href="#p{{idItem}}" class="focus-page" aria-hidden="true">focus</a>
               <label class="selected-closer" for="menuChk">&nbsp;</label>
               <article>
                 <h2>{{item.title}}</h2>

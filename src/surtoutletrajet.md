@@ -10,6 +10,7 @@ mediatype: 'iframe'
 img: 'https://www.youtube.com/embed/gklxbGVkM14'
 ---
 
+### Personnel
 Le 5 janvier 2018, le vidéaste
 **Pier-re** lance un appel à contribution
 en proposant un mockup de jeu.

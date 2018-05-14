@@ -130,7 +130,7 @@
 
 
   .home-item {
-    height: var(--boxheight);
+    height: calc(var(--boxheight) - 132px);
   }
 
 }

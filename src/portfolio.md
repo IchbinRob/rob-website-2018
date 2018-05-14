@@ -11,6 +11,7 @@ img: 'rl.png'
 alt: "page d'accueil de mon ancien portfolio en ligne (2017)"
 ---
 
+### Cours ̷̴͓̇͋᷃ Perso
 Pour mon portfolio en ligne, j’ai souhaité
 proposer une interface originale
 et qui laisse le **choix** à l’utilisateur.

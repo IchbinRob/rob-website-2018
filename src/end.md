@@ -2,10 +2,10 @@
 collections: sections
 layout: section.njk
 slug: trajet
-title: "fin"
+title: "infinr"
 titleitem: 'Infini/̷̴͓̎̇͋᷃r'
 weight: 25
 lettre: '&amp;'
 ---
 
-## Wow such portfolio
+### Soȯ̷̴͓͋᷃n

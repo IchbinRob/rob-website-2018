@@ -2,7 +2,7 @@
 collections: sections
 layout: default.njk
 slug: home
-title: '.'
+title: 'Bienvenue :)'
 titleitem: Départ
 lettre: R
 weight: 0

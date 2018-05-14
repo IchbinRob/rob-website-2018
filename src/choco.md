@@ -11,6 +11,7 @@ img: 'choco-antan.jpg'
 alt: "page d'accueil du site de la Chocolaterie d'Antan représentant une facade et une porte"
 ---
 
+### Stage
 Pour mon stage de fin de DUT MMI
 (10 semaines), je me suis occupé
 de la refonte du site de **La Chocolaterie
