@@ -16,3 +16,6 @@ weight: 0
 * <span class="icon-gamepad"></span> itch.io : <a href="https://ichbinrob.itch.io" target="_blank"><strong>ichbinrob.itch.io</strong></a>
 * <span class="icon-github"></span> github : <a href="https://github.com/IchbinRob" target="_blank"><strong>github.com/IchbinRob</strong></a>
 * <span class="icon-beer"></span> labo : <a href="https://www.jill.beer" target="_blank"><strong>projets divers et expérimentations</strong></a>
+
+an extension for my photographic works
+and an english version is coming soon

@@ -17,9 +17,6 @@ alt: "une photo de Robinson les cheveux cours"
 Je suis étudiant en Licence
 Professionelle Création
 Multimédia à La Rochelle.
-Je suis titulaire
-d’un baccalauréat scientifique
-option sciences de l’ingénieur.
 Je m’intéresse de près
 aux nouvelles technologies,
 autant au hardware
@@ -35,4 +32,5 @@ et qui voit naitre de nouvelles
 technologies tous les jours.
 Je suis sensibilisé
 et attentif aux enjeux
-éthiques de l’internet.
+éthiques d'internet.
+<a href="./images/RobinsonLacotte-CV2018.pdf" target="_blank">**Curriculum vitæ**</a>
