@@ -28,3 +28,4 @@ mes connaissances autour du **SVG**
 (savoir utiliser un code SVG directement
 dans le HTML et l’animer ensuite
 en JavaScript)
+<a href="https://www.jill.beer/f/portfolio2017" target="_blank"><strong>https://www.jill.beer/f/portfolio2017</strong></a>

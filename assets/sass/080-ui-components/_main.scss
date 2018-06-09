@@ -82,14 +82,17 @@
 
     p,
     li {
-      white-space: pre;
       line-height: normal;
-      font-size: 3.5vw;
+      font-size: 4.5vw;
       overflow-x: hidden;
       overflow-y: auto;
+      max-width: 95%;
 
       @media screen and (min-width:425px) {
+        font-size: 3.5vw;
+        white-space: pre;
         font-size: 1rem;
+        max-width: inherit;
       }
     }
 

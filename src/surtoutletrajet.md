@@ -34,4 +34,4 @@ les musiques et le sound design.
 Le jeu est sorti le 15 mars 2018
 sur la platfeforme de partage de jeux
 indépendants itch.io.
-[**https://ichbinrob.itch.io/sur-tout-le-trajet**](https://ichbinrob.itch.io/sur-tout-le-trajet)
+<a href="https://ichbinrob.itch.io/sur-tout-le-trajet" target="_blank"><strong>https://ichbinrob.itch.io/sur-tout-le-trajet</strong></a>
