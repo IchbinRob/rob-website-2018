@@ -2,7 +2,7 @@
 collections: sections
 layout: section.njk
 slug: portfolio
-title: Portfolio
+title: Portfolio 2017
 titleitem: Portfolio web 2017
 weight: 10
 lettre: W

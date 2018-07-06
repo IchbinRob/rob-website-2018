@@ -187,7 +187,7 @@ body {
     height: var(--boxheight);
     overflow: scroll;
     grid-column: 2/2;
-    @media screen and (min-height: 500px), (min-width:770px){
+    @media screen and (min-width:770px) {
       overflow: hidden;
     }
   }
