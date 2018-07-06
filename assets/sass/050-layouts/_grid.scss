@@ -184,11 +184,13 @@ body {
     grid-template-rows: auto;
     position: relative;
     z-index: 150;
-    height: var(--boxheight);
     overflow: scroll;
     grid-column: 2/2;
+    height: calc(100vh - 150px);
     @media screen and (min-width:770px) {
+      height: var(--boxheight);
       overflow: hidden;
+      margin-top: 0px;
     }
   }
 }
