@@ -58,7 +58,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src(['./assets/images/**/*.{png,jpg,jpeg,gif,pdf}'])
+    return gulp.src(['./assets/images/**/*.{png,jpg,jpeg,gif,pdf,mp4,svg}'])
       // .pipe(responsive(
       //   {
       //       quality: 70,

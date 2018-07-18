@@ -53,7 +53,7 @@
               </defs>
             </svg>
             <nav>
-              <label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility">&infin;</label>
+              <label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility"><img src="images/infini.svg" style="height: 100%;width: 100%;" alt=""></label>
             </nav>
             <div>
               <a href="#p{{idItem}}" class="focus-page" aria-hidden="true">focus</a>
@@ -65,6 +65,9 @@
                 {% endif %}
                 {% if item.mediatype === 'img' %}
                 <img src="images/{{item.img}}" alt="{{item.alt}}">
+                {% endif %}
+                {% if item.mediatype === 'video' %}
+                <video src="images/{{item.img}}" autoplay loop></video>
                 {% endif %}
                 <div class="content-item {{item.slug}}-item">
                   {{ item.contents | safe }}
